@@ -1,0 +1,14 @@
+#yml 文件 键值对中间要必须有空格 yml好于propertiesspring:
+spring:
+  profiles:
+    active: dev
+  datasource:
+    dbcp2:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/dbgirl
+      username: root
+      password: root
+  jpa:
+     hibernate:
+       ddl-auto: create
+     show-sql: true
