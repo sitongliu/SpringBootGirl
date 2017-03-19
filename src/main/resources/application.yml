@@ -3,12 +3,11 @@ spring:
   profiles:
     active: dev
   datasource:
-    dbcp2:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/dbgirl
       username: root
       password: root
   jpa:
      hibernate:
-       ddl-auto: create
+       ddl-auto: update
      show-sql: true

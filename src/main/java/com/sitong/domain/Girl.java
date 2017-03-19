@@ -1,8 +1,9 @@
-package com.sitong;
+package com.sitong.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 
 /**
  * Created by LiuSitong on 2017/3/17.
@@ -13,9 +14,12 @@ public class Girl {
     @Id
     @GeneratedValue
     private int id;
+
+    @Min(value = 18,message = "18以下禁止入内")
     private int age;
     private String cupSize;
 
+    //必须要无参数的构造方法
     public Girl() {
     }
 
@@ -41,5 +45,15 @@ public class Girl {
 
     public void setCupSize(String cupSize) {
         this.cupSize = cupSize;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Girl{" +
+                "id=" + id +
+                ", age=" + age +
+                ", cupSize='" + cupSize + '\'' +
+                '}';
     }
 }

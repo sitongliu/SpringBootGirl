@@ -1,5 +1,6 @@
-package com.sitong;
+package com.sitong.controller;
 
+import com.sitong.properties.GirlProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
